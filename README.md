@@ -27,3 +27,4 @@ you can change Limits by adding new user and then define total of connection. (1
 <b>Note: </b> : in v2 new users will checked automatically
 
 tested on this V2ray: https://seakfind.github.io/2021/10/10/X-UI/
+also tested on MHsanaei panel
