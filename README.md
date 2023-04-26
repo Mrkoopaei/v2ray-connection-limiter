@@ -13,12 +13,14 @@ so i made something for VLESS and other protocols (vmess seems blocked in iran) 
 
 </details>
 <details>
+<summary>how it works?</summary>
 ### how it works?
 it's finding connected IPs to user's Port and if more than specific IP counts are connected , it will disable that account . new file created beside main.py file. then you can run start.py file. this file show you a menu to add your specific limit Users.
 
 it counts those IPs which connecting and downloading data in same time so it doesn't count standbyed and disconnected connections
 </details>
 <details>
+<summary>Guideline</summary>
 ### Guideline :
 1 - install python .<br>
 2 - pip3 install requests and pip3 install schedule<br>
@@ -29,7 +31,8 @@ it counts those IPs which connecting and downloading data in same time so it doe
 All of the above options will be installed by running INSTALL.SH file. before running this bash file you should change its permission to execute on your Linux operatintg system. make sure you run this command ** chmod +x /path/install.sh **
 </details>
 <details>
-###Note: 
+  <summary>Note</summary>
+### Note: 
 this script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user.
 you can change Limits by adding new user and then define total of connection. (1 means only one device could able to connect but i suggest to set it on 3 it works great then, becuase sometimes switching between mobileData and ADSL gonna make some issues so num 3 is better .)
 
