@@ -2,7 +2,7 @@ v2ray-connection-limiter <br><br>
 (new and different / if you have V2 Engine panel please update codes on your server)<br>
 with this python script you can specify and ban those V2ray accounts which aren't only connected to one devices. 
 
-<summary>Some description about this script</summary>
+
 
 ## running this script beside X-UI management panel
 It's simple part i could do for the ppl who providing VPN for iranian users so they could selling VPN for more and more users. so 50 50 WIN WIN ! VPN providers getting money to get more Servers and many users Could get VPN as well lol. we should be togheder right ?
@@ -10,15 +10,13 @@ It's simple part i could do for the ppl who providing VPN for iranian users so t
 so i made something for VLESS and other protocols (vmess seems blocked in iran) which you can detect those accounts which using by more than 1 IP ! this script might has some bugs and it's possible to get more power from CPU SERVER .! so check everything first and put it on background
 
 
-<summary>how it works?</summary>
+
 ## how it works?
 it's finding connected IPs to user's Port and if more than specific IP counts are connected , it will disable that account . new file created beside main.py file. then you can run start.py file. this file show you a menu to add your specific limit Users.
 
 it counts those IPs which connecting and downloading data in same time so it doesn't count standbyed and disconnected connections
 
 
-<summary>Guideline</summary>
-  
 ## Guideline :
 First of all you need to update and upgrade yout Ubuntu Linux OS.
   On Ubuntu (need to be root user):
@@ -59,8 +57,8 @@ python3 start.py
    > To show your X-UI accounts press and enter 4 <br>
 
 
-<summary>Note</summary>
-  
+
+
 ### Note: 
 This script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user. <br>
 you can change Limits by adding new user and then define total of connection. (1 means only one device could able to connect but i suggest to set it on 3 it works great then, becuase sometimes switching between mobileData and ADSL gonna make some issues so num 3 is better .) <br><br>
