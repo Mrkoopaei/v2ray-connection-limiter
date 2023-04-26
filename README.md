@@ -17,6 +17,8 @@ it counts those IPs which connecting and downloading data in same time so it doe
 3 - install netstat (if your server doesn't have it so install it - debian : apt install net-tools)<br>
 4 - put it on background => nohup python3 main.py &  (without background process : python3 main.py) it will start when you run Install.sh bash file<br>
 5 - you can set telegram bot token + your tlg chat_id for notification as well . it's pretty clear on the code .
+
+All of the above options will be installed by running INSTALL.SH file. before running this bash file you should change its permission to execute on your Linux operatintg system. make sure you run this command --> chmod +x /path/install.sh
 <br>
 <b><h4>Note: </h4></b><br>
 this script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user.
