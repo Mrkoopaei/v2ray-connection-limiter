@@ -46,26 +46,25 @@ pip3 install --root-user-action=ignore requests
 python3 start.py
   ```
  Then you should see below MENU:
-   ```
+
        Please enter your selection:
         1. Add New User to limit
         2. Delete User
         3. Show Limited User List
         4. Show V2RAY User List
 
-   ```
-   > Adding your new V2eay limit account remark or name by selecting 1
-   > Deleting your limited V2ray account press 2 then Enter
-   > To show your inner limited user list press and enter 3
-   > To show your X-UI accounts press and enter 4
+   > Adding your new V2eay limit account remark or name by selecting 1 <br>
+   > Deleting your limited V2ray account press 2 then Enter <br>
+   > To show your inner limited user list press and enter 3 <br>
+   > To show your X-UI accounts press and enter 4 <br>
 
 
 <summary>Note</summary>
   
 ### Note: 
-this script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user. <br>
-you can change Limits by adding new user and then define total of connection. (1 means only one device could able to connect but i suggest to set it on 3 it works great then, becuase sometimes switching between mobileData and ADSL gonna make some issues so num 3 is better .)
+This script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user. <br>
+you can change Limits by adding new user and then define total of connection. (1 means only one device could able to connect but i suggest to set it on 3 it works great then, becuase sometimes switching between mobileData and ADSL gonna make some issues so num 3 is better .) <br><br>
 
-New users will checked automatically during 10 minutes.
-> tested on this V2ray: https://seakfind.github.io/2021/10/10/X-UI/
+New users will checked automatically during 10 minutes. <br>
+> tested on this V2ray: https://seakfind.github.io/2021/10/10/X-UI/ <br>
 > also tested on MHsanaei panel
