@@ -19,7 +19,7 @@ it counts those IPs which connecting and downloading data in same time so it doe
 5 - you can set telegram bot token + your tlg chat_id for notification as well . it's pretty clear on the code .
 <br>
 <b><h4>Note: </h4></b><br>
-this script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how manu IPs are using from your specific v2ray user.
+this script will create new DB storing your users V2ray data. that named limiter.db. main.py file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user.
 you can change Limits by adding new user and then define total of connection. (1 means only one device could able to connect but i suggest to set it on 3 it works great then, becuase sometimes switching between mobileData and ADSL gonna make some issues so num 3 is better .)
 
 <b>Note: </b> : in v2 new users will checked automatically
