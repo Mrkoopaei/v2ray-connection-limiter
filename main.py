@@ -7,6 +7,7 @@ import subprocess;
 import threading;
 import schedule;
 _db_address = '/etc/x-ui/x-ui.db'
+_db_inner_address =  'limiter.db'
 _max_allowed_connections = 1
 _user_last_id = 0
 _telegrambot_token = ''
@@ -14,12 +15,17 @@ _telegram_chat_id = '' # you can get this in @cid_bot bot.
 def getUsers():
     global _user_last_id
     conn = sqlite3.connect(_db_address)
+    conn_inner = sqlite3.connect(_db_inner_address)
     cursor = conn.execute(f"select id,remark,port from inbounds where id > {_user_last_id}");
+    inner_list = conn_inner.execute("select * from limitation");
     users_list = [];
     for c in cursor:
-        users_list.append({'name':c[1],'port':c[2]})
-        _user_last_id = c[0];
+        for in_list in inner_list:
+            if c[1].lower() == in_list[1].lower():
+                users_list.append({'name':c[1],'port':c[2]})
+                _user_last_id = c[0];
     conn.close();
+    conn_inner.close();
     return users_list
 
 def disableAccount(user_port):
@@ -30,7 +36,7 @@ def disableAccount(user_port):
     time.sleep(2)
     os.popen("x-ui restart")
     time.sleep(3)
-    
+
 def checkNewUsers():
     conn = sqlite3.connect(_db_address)
     cursor = conn.execute(f"select count(*) from inbounds WHERE id > {_user_last_id}");
