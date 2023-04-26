@@ -34,13 +34,18 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
   ```
 3 - install netstat (if your server doesn't have it so install it )<br>
   ```
-  sudo apt-get install net-install
+  sudo apt-get install net-tools
   ```
-4 - after install above tools you should run <b>start.py</b> file. it on background => nohup python3 main.py &  (without background process : python3 main.py) <br>
+4 - after install above tools you should run <b>start.py</b> file. start.py file will run main.py file automatically on background.<br>
 
   ```
   python start.py
   ```
+  you can see main.py background process by running below command (it will show you all processes which started with python process name):
+  ```
+  sudo ps -aux | grep python
+  ```
+  
 5 - you can set telegram bot token + your tlg chat_id for notification as well . it's pretty clear on the code .
 
 All of the above options will be installed by running <b>INSTALL.SH</b> file. before running this bash file you should change its permission to execute on your Linux operatintg system. make sure you run this command before execute:
