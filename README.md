@@ -1,5 +1,5 @@
 v2ray-connection-limiter <br><br>
-(new and different / if you have V2 please update codes on your server)<br>
+(new and different / if you have V2 Engine panel please update codes on your server)<br>
 with this python script you can specify and ban those V2ray accounts which aren't only connected to one devices. 
 
 <details>
@@ -28,7 +28,10 @@ it counts those IPs which connecting and downloading data in same time so it doe
 4 - put it on background => nohup python3 main.py &  (without background process : python3 main.py) it will start when you run Install.sh bash file<br>
 5 - you can set telegram bot token + your tlg chat_id for notification as well . it's pretty clear on the code .
 
-All of the above options will be installed by running INSTALL.SH file. before running this bash file you should change its permission to execute on your Linux operatintg system. make sure you run this command ** chmod +x /path/install.sh **
+All of the above options will be installed by running INSTALL.SH file. before running this bash file you should change its permission to execute on your Linux operatintg system. make sure you run this command 
+  ```
+  chmod +x /path/install.sh
+  ```
 </details>
 <details>
   <summary>Note</summary>
