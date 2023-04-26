@@ -45,11 +45,13 @@ python3 start.py
   ```
  Then you should see below MENU:
 
-       Please enter your selection:
-        1. Add New User to limit
-        2. Delete User
-        3. Show Limited User List
-        4. Show V2RAY User List
+Please enter your selection:
+  1. Add New User to limit
+  2. Delete User
+  3. Show Limited User List
+  4. Show V2RAY User List
+
+Please select from above:
 
    > Adding your new V2eay limit account remark or name by selecting 1 <br>
    > Deleting your limited V2ray account press 2 then Enter <br>
