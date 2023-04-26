@@ -41,5 +41,6 @@ you can change Limits by adding new user and then define total of connection. (1
 
 New users will checked automatically during 10 minutes.
 tested on this V2ray: https://seakfind.github.io/2021/10/10/X-UI/
+
 also tested on MHsanaei panel
 </details>
