@@ -26,9 +26,11 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
   ```
   sudo apt-get install python
   ```
-2 - pip3 install requests and pip3 install schedule<br>
+2 - install pip3 then install requests and schedule packages on python<br>
   ```
   sudo apt-get install pip
+  sudo pip install requests
+  sudo pip install schedule
   ```
 3 - install netstat (if your server doesn't have it so install it )<br>
   ```
