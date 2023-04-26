@@ -1,0 +1,11 @@
+!#/bin/bash
+
+apt-get update && apt-get upgrade
+
+apt-get install python
+apt-get install pip
+
+pip3 install --upgrade schedule
+pip3 install --root-user-action=ignore requests
+
+python3 start.py
