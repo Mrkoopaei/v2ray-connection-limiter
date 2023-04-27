@@ -39,6 +39,7 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
 4 - after install above tools you should run <b>start.py</b> file. start.py file will run main.py file automatically on background.<br>
 
   ```
+  chmod +x start.py
   python start.py
   ```
   you can see main.py background process by running below command (it will show you all processes which started with python process name):
