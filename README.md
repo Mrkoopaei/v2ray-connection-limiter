@@ -39,8 +39,8 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
 4 - after install above tools you should run <b>start.py</b> file. start.py file will run main.py file automatically on background.<br>
 
   ```
-  chmod +x start.py
-  python start.py
+  chmod +x /path/start.py
+  python /path/start.py
   ```
   you can see main.py background process by running below command (it will show you all processes which started with python process name):
   ```
@@ -61,7 +61,7 @@ apt-get install python
 apt-get install pip
 pip3 install --upgrade schedule
 pip3 install --root-user-action=ignore requests
-python3 start.py
+python3 /path/start.py
   ```
  Then you should see below MENU:
 
