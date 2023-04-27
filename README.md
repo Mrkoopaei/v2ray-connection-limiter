@@ -26,11 +26,12 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
   ```
   sudo apt-get install python
   ```
-2 - install pip3 then install requests and schedule packages on python<br>
+2 - install pip3 then install requests, psutil and schedule packages on python<br>
   ```
   sudo apt-get install pip
   sudo pip install requests
-  sudo pip install schedule
+  sudo pip install --upgrade schedule
+  sudo pip install psutil
   ```
 3 - install netstat (if your server doesn't have it so install it )<br>
   ```
@@ -39,8 +40,8 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
 4 - after install above tools you should run <b>start.py</b> file. start.py file will run main.py file automatically on background.<br>
 
   ```
-  chmod +x /path/start.py
-  python /path/start.py
+  chmod +x start.py
+  python start.py
   ```
   you can see main.py background process by running below command (it will show you all processes which started with python process name):
   ```
@@ -51,17 +52,19 @@ First of all you need to update and upgrade yout Ubuntu Linux OS.
 
 All of the above options will be installed by running <b>INSTALL.SH</b> file. before running this bash file you should change its permission to execute on your Linux operatintg system. make sure you run this command before execute:
   ```
-  chmod +x /path/install.sh
+  chmod +x install.sh
+  bash install.sh
   ```
  Or
- run below commands on your Linux command line:
+ Altogether you can copy and past run commands :
   ```
 apt-get update && apt-get upgrade
 apt-get install python
 apt-get install pip
-pip3 install --upgrade schedule
-pip3 install --root-user-action=ignore requests
-python3 /path/start.py
+pip install --upgrade schedule
+pip install --root-user-action=ignore requests
+pip install --root-user-action=ignore psutil
+python3 start.py
   ```
  Then you should see below MENU:
 
@@ -70,6 +73,7 @@ Please enter your selection:
   2. Delete User
   3. Show Limited User List
   4. Show V2RAY User List
+  5. View blocking results 
 
 Please select from above:
 
@@ -77,7 +81,7 @@ Please select from above:
    > Deleting your limited V2ray account press 2 then Enter <br>
    > To show your inner limited user list press and enter 3 <br>
    > To show your X-UI accounts press and enter 4 <br>
-
+   > Press 5 and Enter to show What happen with entered Users.
 
 ### Note: 
 This script will create new DB storing your users V2ray data. that named <b>limiter.db</b>. <b>main.py</b> file will refer to your inner DB then it will detect how many IPs are using from your specific v2ray user. <br>
