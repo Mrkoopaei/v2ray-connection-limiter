@@ -47,7 +47,8 @@ def checkNewUsers():
 
 def init():
     users_list = getUsers();
-    for user in users_list:
+    for user in users_list:	    
+        print(user['name'])
         thread = AccessChecker(user)
         thread.start()
         print("starting checker for : " + user['name'])
@@ -63,7 +64,6 @@ class AccessChecker(threading.Thread):
             netstate_data =  os.popen("netstat -np 2>/dev/null | grep :"+str(user_port)+" | awk '{if($3!=0) print $5;}' | cut -d: -f1 | sort | uniq -c | sort -nr | head").read();
             netstate_data = str(netstate_data)
             connection_count =  len(netstate_data.split("\n")) - 1;
-            #print("c "+str(user_port) + "-"+ str(connection_count))
             if connection_count > _max_allowed_connections:
                 user_remark = user_remark.replace(" ","%20")
                 requests.get(f'https://api.telegram.org/bot{_telegrambot_token}/sendMessage?chat_id={_telegram_chat_id}&text={user_remark}%20locked')

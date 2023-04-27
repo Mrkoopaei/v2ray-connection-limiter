@@ -1,6 +1,8 @@
 from glob import glob
 import os;
 import sqlite3;
+import psutil;
+import sys;
 import time;
 import subprocess;
 import threading;
@@ -109,16 +111,13 @@ def Inser_New_User(conn, Data_List):
     except Error as e:
         print(e)
 
-# def getSpecialUsers():
-#     users_list = [];
-#     u_remark = input("Enter V2Ray User Remark to limit connection: ");
-#     if UserExist(u_remark):
-#         u_limit_ = input("How many users can connect: ");
-#         add_new_remarker = input("Wanna add new user (y/n): ");
-#         users_list.append({'name':{UserExist['name']},'port':{UserExist['port']},'limitation':{u_limit_}});
-#     else:
-#         print({u_remark} + " doesn't exist...");
-#     return users_list
+def findMainProcess():
+    for process in psutil.process_iter():
+        if process.cmdline() == ['nohup', 'python3', 'main.py']:
+            sys.exit('Process found: exiting.')
+
+    print('Process not found: starting it.')
+    Popen(['nohup', 'python3', 'main.py'])
 
 def init():
     conn = create_inner__connection(r"limiter.db")
@@ -127,7 +126,7 @@ def init():
     else:
         create_inner_table(conn)
     print("""
-    Select One:
+    Please enter your selection:
         1. Add New User to limit
         2. Delete User
         3. Show Limited User List
@@ -143,7 +142,6 @@ def init():
             else:
                 print(entereduser," doesn't exists...");
                 exit();
-            os.system('nohup python3 main.py')
         case "2":
             for row in GetInnerUsers():
                 print(row)
@@ -157,6 +155,5 @@ def init():
             print('Total - Remark - Port')
             for row in GetV2rayUsers():
                 print(row)
-    
-    
+    findMainProcess()
 init();

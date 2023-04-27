@@ -5,7 +5,11 @@ apt-get update && apt-get upgrade
 apt-get install python
 apt-get install pip
 
-pip3 install --upgrade schedule
-pip3 install --root-user-action=ignore requests
+pip install --upgrade schedule
+pip install --root-user-action=ignore requests
+pip install psutil
+
+chmod +x start.py
+chmod +x main.py
 
 python3 start.py
