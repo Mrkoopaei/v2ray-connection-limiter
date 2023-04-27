@@ -113,11 +113,11 @@ def Inser_New_User(conn, Data_List):
 
 def findMainProcess():
     for process in psutil.process_iter():
-        if process.cmdline() == ['nohup', 'python3', 'main.py']:
+        if process.cmdline() == ['nohup', 'python3', '-u', 'main.py']:
             sys.exit('Process found: exiting.')
 
     print('Process not found: starting it.')
-    Popen(['nohup', 'python3', 'main.py'])
+    Popen(['nohup', 'python3', '-u', 'main.py'])
 
 def init():
     conn = create_inner__connection(r"limiter.db")
@@ -131,6 +131,7 @@ def init():
         2. Delete User
         3. Show Limited User List
         4. Show V2RAY User List
+        5. View blocking results
         """);
     selectedItem = input("Please select from above: ");
     match selectedItem:
@@ -155,5 +156,10 @@ def init():
             print('Total - Remark - Port')
             for row in GetV2rayUsers():
                 print(row)
+        case "5":
+            print(" \n-----------------\n");
+            with open('nohup.out') as f:
+                contents = f.read()
+                print(contents)
     findMainProcess()
 init();
