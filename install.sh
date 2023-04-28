@@ -11,7 +11,7 @@ pip install psutil
 git clone https://github.com/Mrkoopaei/v2ray-connection-limiter.git
 
 cd v2ray-connection-limiter
-chmod +x pwd && /v2ray-connection-limiter/start.py
-chmod +x pwd && /v2ray-connection-limiter/main.py
+chmod +x $(pwd)/v2ray-connection-limiter/start.py
+chmod +x $(pwd)/v2ray-connection-limiter/main.py
 
-python3 pwd && /v2ray-connection-limiter/start.py
+python3 $(pwd)/v2ray-connection-limiter/start.py
