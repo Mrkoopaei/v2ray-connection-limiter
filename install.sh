@@ -8,7 +8,7 @@ pip install --upgrade schedule
 pip install --root-user-action=ignore requests
 pip install psutil
 
-git clone https://github.com/Mrkoopaei/v2ray-connection-limiter.git
+git clone https://raw.githubusercontent.com/Mrkoopaei/v2ray-connection-limiter/main/install.sh
 
 chmod +x start.py
 chmod +x main.py
