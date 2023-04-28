@@ -21,7 +21,7 @@ Easy Install, Copy and Paste below code to install script on your Linux os:
   ```
   bash <(curl -Ls https://raw.githubusercontent.com/Mrkoopaei/v2ray-connection-limiter/main/install.sh)
   ```
-First of all you need to update and upgrade yout Ubuntu Linux OS.
+First of all you need to update and upgrade your Ubuntu Linux OS.
   On Ubuntu (need to be root user):
   ```
   sudo apt-get update & apt-get upgrade
