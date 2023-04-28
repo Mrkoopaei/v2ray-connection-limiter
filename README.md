@@ -4,7 +4,7 @@ with this python script you can specify and ban those V2ray accounts which aren'
 
 
 ## running this script beside X-UI management panel
-It's simple part i could do for the ppl who providing VPN for iranian users so they could selling VPN for more and more users. so 50 50 WIN WIN ! VPN providers getting money to get more Servers and many users Could get VPN as well lol. we should be togheder right ?
+It's simple part i could do for the ppl who providing VPN for iranian users so they could selling VPN for more and more users. so 50 50 WIN WIN ! VPN providers getting money to get more Servers and many users Could get VPN as well.
 
 so i made something for VLESS and other protocols (vmess seems blocked in iran) which you can detect those accounts which using by more than 1 IP ! this script might has some bugs and it's possible to get more power from CPU SERVER .! so check everything first and put it on background
 
