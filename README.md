@@ -17,6 +17,10 @@ it counts those IPs which connecting and downloading data in same time so it doe
 
 
 ## Guideline :
+Easy Install, Copy and Paste below code to install script on your Linux os:
+  ```
+  bash <(curl -Ls https://raw.githubusercontent.com/Mrkoopaei/v2ray-connection-limiter/main/install.sh)
+  ```
 First of all you need to update and upgrade yout Ubuntu Linux OS.
   On Ubuntu (need to be root user):
   ```
